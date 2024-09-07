@@ -81,6 +81,14 @@ def lonely(group):
     return sum(result_group)
 
 
+def powerful(x):
+    "You know factorial? This is factorial, but it's x to the power of y instead of x times y."
+    r = 1
+    for a in range(x):
+        r **= (a + 1)
+    return r
+
+
 def grammar(word):
     word = list(word.lower())
     word[0] = word[0].upper()
