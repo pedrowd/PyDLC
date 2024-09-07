@@ -3,6 +3,13 @@ def steal(victim, robber, index):
     victim.pop(index)
 
 
+def trade(trader1, trader2, index):
+    placeholder1 = trader1[index]
+    placeholder2 = trader2[index]
+    trader1[index] = placeholder2
+    trader2[index] = placeholder1
+
+
 def sep_sum(list1, list2):
     return_list = []
     for a in range(min(len(list1), len(list2))):
