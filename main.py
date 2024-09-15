@@ -89,6 +89,15 @@ def powerful(x):
     return r
 
 
+def list_to_int(target_list, base):
+    multiplier = base ** (len(target_list) - 1)
+    result = 0
+    for x in range(len(target_list)):
+        result += target_list[x] * multiplier
+        multiplier /= base
+    return result
+
+
 def grammar(word):
     word = list(word.lower())
     word[0] = word[0].upper()
