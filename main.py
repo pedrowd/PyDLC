@@ -98,6 +98,19 @@ def list_to_int(target_list, base):
     return result
 
 
+def str_to_int(target_str, base):
+    return list_to_int(str(target_str), base)
+
+
+def etisoppo(number, base):
+    """Alright, the name might seem weird, but this function does the following:
+    
+    1: Returns the number divided by the number backwards.
+    
+    2: That's it"""
+    return number / str_to_int(str(number)[::-1], base)
+
+
 def grammar(word):
     word = list(word.lower())
     word[0] = word[0].upper()
