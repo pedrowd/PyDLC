@@ -37,6 +37,17 @@ def get_index(target_list, thing):
     return None
 
 
+def semi_equal(list1, list2):
+    if len(list1) == len(list2):
+        result = 0
+        for index in range(len(list1)):
+            if list1[index] in list2:
+                result += 1
+        if result == len(list2):
+            return True
+    return False
+
+
 def crown(x):
     """Basically an interpretation of the 3x+1 problem as a function."""
     result = 0
