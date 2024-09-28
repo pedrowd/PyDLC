@@ -113,6 +113,11 @@ def str_to_int(target_str, base):
     return list_to_int(str(target_str), base)
 
 
+def str_numberize(target_str, base):
+    for index in range(len(list(target_str))):
+        target_str[index] = str_to_int(target_str[index], base)
+
+
 def etisoppo(number, base):
     """Alright, the name might seem weird, but this function does the following:
     
